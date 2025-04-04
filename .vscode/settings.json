@@ -1,0 +1,9 @@
+{
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.quickSuggestionsDelay": 10,
+    "editor.quickSuggestions": {
+        "other": "inline",
+        "comments": "off",
+        "strings": "off"
+    }
+}
