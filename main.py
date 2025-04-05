@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Загружаем переменные окружения
 load_dotenv()
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -118,7 +118,7 @@ async def handle_message(update: Update, context: CallbackContext) -> None:
 
 # Запуск бота
 def main():
-    app = Application.builder().token(TOKEN).read_timeout(20).connect_timeout(20).build()
+    app = Application.builder().token(TELEGRAM_TOKEN).read_timeout(20).connect_timeout(20).build()
     app.add_handler(CommandHandler("start", show_model_menu))
     app.add_handler(CallbackQueryHandler(select_model))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
