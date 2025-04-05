@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 # Загружаем переменные окружения
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
