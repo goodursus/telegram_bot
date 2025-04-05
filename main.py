@@ -7,7 +7,7 @@ from requests.exceptions import Timeout
 from dotenv import load_dotenv
 
 # Включаем отладочное логирование
-#logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 # Загружаем переменные окружения
 load_dotenv()
